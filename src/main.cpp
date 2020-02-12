@@ -54,14 +54,12 @@ void loop() {
   Cc2 = digitalRead(7);
   Cc3 = digitalRead(6);
   B = (Cc3 * 8) + (Cc2 * 4) + (Cc1 * 2) + (Cc0 * 1); 
-  
  
   Dc0 = digitalRead(13);
   Dc1 = digitalRead(12);
   Dc2 = digitalRead(11);
   Dc3 = digitalRead(10);
   A = (Dc3 * 8) + (Dc2 * 4) + (Dc1 * 2) + (Dc0 * 1);  
-
  
   lcd.clear();
   lcd.setCursor(0, 1);//most
@@ -72,7 +70,6 @@ void loop() {
   lcd.print(B);
   lcd.setCursor(12, 1);//less
   lcd.print(A);
-
-
+  
   delay(500);
 }
